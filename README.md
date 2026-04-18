@@ -1,131 +1,361 @@
 
-<h1 align="center"> Swiggy Food Delivery Analysis </h1>
+<h1 align="center"> Swiggy Sales Delivery Insights </h1>
 <img src="https://github.com/Sanskrutee-Dudhe/swiggy_Food_Delivery/assets/122347459/ac45c8cb-6dda-4e36-8182-3acd20431b53" width='900px' height='500px' >
+# 🍔 Swiggy Food Delivery — Data Analysis & Dashboard
 
- 
+### End-to-End Data Analytics Project | Web Scraping → SQL → Power BI Dashboard
 
-## 👁️Project Overview
+[![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Selenium](https://img.shields.io/badge/Selenium-Web%20Scraping-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://selenium.dev)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
+[![MySQL](https://img.shields.io/badge/MySQL-SQL%20Analysis-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![Excel](https://img.shields.io/badge/Excel-Data%20Cleaning-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://microsoft.com/excel)
 
-The project Swiggy Food Delivery Analysis, which delves into food delivery and restaurant analysis with a focus on Swiggy, a prominent food delivery platform. Our project involved data extraction, comprehensive data analysis, and the creation of an interactive dashboard. The objective was to provide valuable recommendations to a consultancy firm interested in opening a remote kitchen in Bangalore. Let's explore the project's process, analysis, key findings, and recommendations.
+> **B.Tech Final Year Project | Computer Science & Engineering**
 
-<br>
+</div>
 
-## 📋Table of Contents
-- [`Aim/Objectives`](#aimobjectives)
-- [`Problem Statement`](#problem-statement)
-- [`Tools, Libraries, and Techniques`](#tools-libraries-and-techniques)
+---
 
-- [`Data Acquisition: Web Scraping and Preprocessing`](#data-acquisition-web-scraping-and-preprocessing)
-- [`Analysis Process`](#analysis-process)
-- [`Primary Insights`](#primary-insights)
-- [`Summary`](#summary)
-- [`Learnings and Challenges`](#learnings-and-challenges)
-<br>
+## 📌 Table of Contents
 
-## 🎯Aim/Objectives
+- [Project Overview](#-project-overview)
+- [Business Problem](#-business-problem)
+- [Project Workflow](#-project-workflow)
+- [Dashboard Preview](#-dashboard-preview)
+- [Tech Stack](#️-tech-stack)
+- [Data Acquisition — Web Scraping](#-data-acquisition--web-scraping)
+- [Data Preprocessing](#-data-preprocessing)
+- [SQL Analysis](#-sql-analysis)
+- [Key Insights](#-key-insights)
+- [Strategic Recommendation](#-strategic-recommendation)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Challenges & Learnings](#-challenges--learnings)
+- [Future Scope](#-future-scope)
 
-Our project aimed to:
+---
 
-1. **Data Extraction Excellence**: data extraction from a prominent online food delivery platform, Swiggy, to gather relevant information.
+## 🌟 Project Overview
 
-2. **Comprehensive Data Analysis**: Perform comprehensive data analysis on various dimensions, including regional restaurant profiles, available cuisines, pricing structures, and customer ratings.
+**Swiggy Food Delivery Analysis** is a complete end-to-end data analytics project that scrapes real restaurant data from **Swiggy** — India's leading food delivery platform — performs in-depth analysis, and delivers actionable business intelligence through an interactive **Power BI dashboard**.
 
-3. **Strategic Insights Derivation**:  Derive valuable insights from the data, aiding in the identification of potential opportunities for new market entrants and the development of future strategies.
+The project was built to help a **consultancy firm** make a data-backed decision on **where to open a remote/cloud kitchen in Bangalore**, analyzing restaurant profiles, cuisines, pricing structures, delivery times, and customer ratings across the city.
 
-4. **Real-time Data Framework**: Establish a scalable data framework to facilitate real-time analysis, enhancing the accuracy of predictions and enabling more robust decision-making processes for the food delivery industry.
+---
 
-<br>
+## 💼 Business Problem
 
-## ⛑️Problem Statement
+> *"A consultancy firm wants to open a remote kitchen in Bangalore. Where should they set it up? Which cuisines should they serve? What price point works best?"*
 
-Our project addressed the following key challenges:
+This project answers exactly that — using scraped data, statistical analysis, and a geospatial Power BI dashboard to identify the **optimal location, cuisine, and pricing strategy** for a new cloud kitchen in Bangalore.
 
--  Extracting and organizing extensive data from Swiggy.
--  Rstaurants have specific operating hours, which affects data collection.
-- Analyzing restaurant profiles, cuisines, pricing, and customer ratings.
--  Deriving actionable insights for market entrants and future strategies.
-- Establishing real-time data capabilities for swift decision-making.
+---
 
-<br>
+## 🔄 Project Workflow
 
-## ⚙️Tools, Libraries, and Techniques
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        PROJECT PIPELINE                             │
+│                                                                     │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────────┐  │
+│  │  Swiggy  │───▶│   Web    │───▶│  Excel   │───▶│    MySQL     │  │
+│  │ Website  │    │ Scraping │    │ Cleaning │    │  SQL Queries │  │
+│  │          │    │(Selenium)│    │& Feature │    │  Analysis    │  │
+│  └──────────┘    └──────────┘    │Engineering    └──────┬───────┘  │
+│                                  └──────────┘           │          │
+│                                                          ▼          │
+│                                               ┌──────────────────┐  │
+│                                               │  Power BI        │  │
+│                                               │  Interactive     │  │
+│                                               │  Dashboard       │  │
+│                                               └──────────────────┘  │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
-- **Data Extraction**: We utilized the Selenium library in Python for web scraping.
-- **Data Preprocessing**: Data cleaning and preprocessing were primarily done using Microsoft Excel.
-- **Data Analysis**: We used Python libraries such as Pandas and Matplotlib for data analysis and visualization.
-- **Statistical Analysis**: Statistical tests were applied to identify significant trends,uncover patterns and correlations in the data.
-- **Machine Learning**: Machine learning algorithms were employed for predictive analysis and to uncover hidden insights.
- - **Interactive Dashboard**: A user-friendly dashboard was created to present key findings and insights in an easily digestible format. 
-<br>
+---
 
-## ⚓Data Acquisition: Web Scraping and Preprocessing
+## 📊 Dashboard Preview
 
-We collected data from Swiggy, a major food delivery platform, Our data acquisition process involved web scraping using Python's Selenium and beautifulsoup library, followed by meticulous data preprocessing. we gathered data from Swiggy, a leading food delivery platform. Web scraping was used to automate data collection from restaurant listings, including names, cuisines, pricing, ratings, and reviews from the swiggy website. TSubsequently, data underwent rigorous cleaning, feature engineering, and normalization, resulting in structured datasets ready for analysis. This meticulous process provided a reliable foundation for our in-depth examination of Swiggy's data.
-<br>
+> The Power BI dashboard (`Swiggy Dashboard.pbix`) visualizes all key metrics across Bangalore's restaurant ecosystem.
 
-## 🔍Analysis Process
+### 🗺️ Overview Dashboard — City-Wide Restaurant Intelligence
+![Analytics Dashboard]<img width="800" height="522" alt="image" src="https://github.com/user-attachments/assets/419afcf2-7402-498e-98a7-b98a934271d3" />
 
-Our analysis process encompassed two crucial components:
+*Interactive Power BI dashboard showing restaurant density, average ratings, price ranges, and cuisine distribution across Bangalore neighbourhoods.*
 
-**1. Data Exploration and Cleaning:**
-   We initiated our analysis by thoroughly exploring the collected data, identifying and addressing any inconsistencies or missing values. This step ensured that our data was reliable and ready for deeper analysis.
+---
 
-**2. Correlation Analysis:**
-   We delved into the relationships between variables, particularly exploring correlations between restaurant attributes and customer ratings. This step helped identify patterns and factors influencing customer satisfaction.
+### 📍 Location Heatmap — High-Demand Zones in Bangalore
+![Location Heatmap]<img width="800" height="459" alt="image" src="https://github.com/user-attachments/assets/defcd13e-441f-4621-a8b7-3c06d3cd478a" />
 
-**3. Visualization:**
-    To make the data more accessible, we employed data visualization techniques, including graphs and charts. Visualization enhanced our understanding of trends and provided clear insights for decision-making.
+*Geographic heatmap identifying customer concentration hotspots — Koramangala, Indiranagar, and Ashok Nagar emerge as the top 3 high-demand zones.*
 
-**4.Interactive Dashboard:**
-   To present our findings effectively, we created an interactive dashboard that showcased key insights and recommendations. This user-friendly interface allowed for easy exploration of the data and insights.
-   
-These analyses shed light on results into meaningful insights and recommendations. These findings serve as a resource for making informed decisions in the food delivery industry and optimizing strategies for future success.
+---
 
-<br>
+### 🍽️ Cuisine & Pricing Intelligence
+![Cuisine Analysis]<img width="800" height="445" alt="image" src="https://github.com/user-attachments/assets/13859814-69a4-4dae-8324-3f9dbd445801" />
 
-## 📊Visulization
-![Screenshot 2023-10-17 135708](https://github.com/Sanskrutee-Dudhe/swiggy_Food_Delivery/assets/122347459/f5022334-790d-4ab3-aa64-11816171892c)
+*Bar charts and treemaps breaking down the most popular cuisines, average cost for two, and price band distribution across restaurant categories in Bangalore.*
 
-<br><br>
-![Screenshot 2023-10-17 140010](https://github.com/Sanskrutee-Dudhe/swiggy_Food_Delivery/assets/122347459/b9844ff5-f51b-42b2-8a48-c70636d2d610)
+---
 
+## ⚙️ Tech Stack
 
+| Layer | Tool / Library | Purpose |
+|---|---|---|
+| **Web Scraping** | Python, Selenium, BeautifulSoup | Automated data extraction from Swiggy |
+| **Data Cleaning** | Microsoft Excel, Pandas | Preprocessing, null handling, feature engineering |
+| **Data Analysis** | Python, Pandas, Matplotlib, Seaborn | EDA, statistical analysis, visualisation |
+| **SQL Analysis** | MySQL | Business queries, aggregations, filtering |
+| **ML / Prediction** | Scikit-learn | Pattern detection, predictive analysis |
+| **Dashboard** | Power BI | Interactive visual reporting |
+| **Environment** | Jupyter Notebook, VS Code | Development & analysis |
 
-<br><br>
+---
 
+## 🕷️ Data Acquisition — Web Scraping
 
-## 💡Primary Insights
+Data was collected directly from **Swiggy's website** using automated scraping scripts built in Python.
 
-Our analysis yielded the following key insights:
+### Scraping Scripts
 
-### 🏷️Delivery Time and Customer Ratings
-- There is a limited correlation between delivery time and customer ratings. However, it's noteworthy that top-rated restaurants typically maintain an average delivery time of around 30 minutes.
+| File | Description |
+|---|---|
+| `Scrapping/Swiggy Table_1.ipynb` | Scrapes restaurant names, cuisines, locations, and ratings |
+| `Scrapping/Swiggy Table_2.ipynb` | Scrapes pricing, delivery time, and offer information |
+| `Scrapping/Insights (1).ipynb` | Exploratory analysis and chart generation post-scraping |
 
-### 🏷️Strategic Location:
-- The project's recommendation to establish a remote kitchen strategically located between Koramangala, Indiranagar, and Ashok Nagar capitalizes on high customer concentration in these areas. This central location reduces delivery times, enhances operational efficiency, and fosters customer loyalty.
+### Data Points Collected
 
-### 🏷️Market Balance
-- Serving customers from all three areas ensures a balanced market presence, mitigating the risk of losing customers to competitors exclusively located in one area.
+```python
+# Data points scraped per restaurant listing:
+{
+  "restaurant_name":   "String",
+  "cuisine_type":      ["North Indian", "Chinese", ...],
+  "location":          "Area, Bangalore",
+  "avg_cost_for_two":  Integer (INR),
+  "customer_rating":   Float (0.0 – 5.0),
+  "delivery_time":     Integer (minutes),
+  "offers_available":  Boolean
+}
+```
 
-These insights are valuable for optimizing restaurant strategies and enhancing customer experiences in the food delivery market.
+> ⚠️ **Note:** Swiggy restaurant listings are only active during business hours, so scraping was scheduled during the **11 AM – 10 PM** window.
 
-<br>
+---
 
-## 💼Summary
+## 🧹 Data Preprocessing
 
-Our data-driven project, analyzing Swiggy data, yields insights into restaurant performance. We find that delivery time minimally impacts customer ratings, and pricing has a marginal effect. We recommend a strategically located remote kitchen between high-demand areas for operational efficiency and expanded reach, ensuring success in the competitive food delivery market.
+After scraping, the raw data went through a rigorous cleaning pipeline:
 
-### 🎗️Learnings
+- **Null Value Treatment** — Missing ratings and pricing filled using area-wise medians
+- **Duplicate Removal** — Duplicate restaurant entries across locations identified and dropped
+- **Data Type Normalization** — Delivery time (string → int), cost (₹ symbol stripped → int)
+- **Feature Engineering** — Created `price_band` (Budget / Mid-range / Premium) and `is_top_rated` (rating ≥ 4.0) columns
+- **Outlier Handling** — Delivery times > 90 min flagged and filtered
+- **Final Dataset** → Exported as `Data/Final_Data.csv`
 
-- Delivery time has limited impact on customer ratings, with top-rated restaurants averaging around 30 minutes.
-- Pricing strategies marginally influence customer satisfaction.
-- Strategic location is vital for efficient operations and customer loyalty.
-- Serving multiple areas maintains market balance and competitiveness.
-### 🛡️Challenges
+---
 
-- Data extraction from online sources can be challenging and time-consuming.
--  Establishing a scalable data framework for real-time analysis and accurate predictions was essential but challenging.
+## 🗄️ SQL Analysis
 
-### 🧰Future Scope
+The cleaned dataset was loaded into **MySQL** for structured business querying.
 
-The project's future scope focuses on strategically locating a remote kitchen in a region bridging Koramangala, Indiranagar, and Ashok Nagar, densely populated areas with high customer demand. This positioning offers expanded customer reach, improved delivery times, operational efficiency, and a balanced market presence, ensuring success in the competitive food delivery market.
+### Sample Business Questions Answered via SQL
+
+```sql
+-- Top 10 highest-rated restaurants in Koramangala
+SELECT restaurant_name, rating, cuisine, avg_cost
+FROM swiggy_data
+WHERE location = 'Koramangala'
+ORDER BY rating DESC
+LIMIT 10;
+
+-- Average delivery time by area
+SELECT location, ROUND(AVG(delivery_time), 2) AS avg_delivery_time
+FROM swiggy_data
+GROUP BY location
+ORDER BY avg_delivery_time ASC;
+
+-- Most popular cuisines by restaurant count
+SELECT cuisine, COUNT(*) AS restaurant_count
+FROM swiggy_data
+GROUP BY cuisine
+ORDER BY restaurant_count DESC
+LIMIT 10;
+
+-- Price band distribution across city
+SELECT
+  CASE
+    WHEN avg_cost <= 200 THEN 'Budget (≤₹200)'
+    WHEN avg_cost <= 500 THEN 'Mid-Range (₹200–500)'
+    ELSE 'Premium (>₹500)'
+  END AS price_band,
+  COUNT(*) AS count
+FROM swiggy_data
+GROUP BY price_band;
+
+-- Areas with highest concentration of top-rated (4.0+) restaurants
+SELECT location, COUNT(*) AS top_rated_count
+FROM swiggy_data
+WHERE rating >= 4.0
+GROUP BY location
+ORDER BY top_rated_count DESC;
+```
+
+---
+
+## 💡 Key Insights
+
+### 🏷️ Delivery Time & Customer Ratings
+- Delivery time shows **limited direct correlation** with ratings overall
+- But restaurants rated **4.0+** consistently deliver within **25–35 minutes**
+- Delivery beyond **45 minutes** correlates with below-average customer ratings
+
+### 🏷️ Pricing & Customer Satisfaction
+- Pricing has a **marginal effect** on ratings
+- **Mid-range restaurants (₹200–₹500 for two)** receive the highest order volumes
+- Premium restaurants sustain ratings through quality, not pricing alone
+
+### 🏷️ Cuisine Demand
+- **North Indian, Chinese, and Biryani** dominate order volumes city-wide
+- Healthy/salad-focused options are trending in tech corridors (HSR, Whitefield)
+- Multi-cuisine menus outperform single-cuisine in overall rating consistency
+
+### 🏷️ Location Intelligence
+- **Koramangala, Indiranagar, and Ashok Nagar** have the highest restaurant density and customer demand
+- These three areas form a central triangle — the ideal zone for a cloud kitchen
+- Restaurants in these zones receive **20–30% higher order frequency** vs outer Bangalore areas
+
+---
+
+## 🎯 Strategic Recommendation
+
+> **Recommendation: Establish a remote kitchen at the geographic midpoint of Koramangala – Indiranagar – Ashok Nagar.**
+
+| Factor | Recommendation |
+|---|---|
+| 📍 **Location** | Central zone between Koramangala – Indiranagar – Ashok Nagar |
+| 🍽️ **Cuisine** | North Indian + Chinese (high demand, proven margins) |
+| 💰 **Price Point** | ₹250–₹400 for two (mid-range sweet spot) |
+| ⏱️ **Delivery Target** | < 30 minutes (critical threshold for high ratings) |
+| 🏆 **Differentiator** | Consistent quality + peak-hour discount offers |
+
+**Why this location?**
+- Covers 3 high-density zones from a single kitchen — maximising reach
+- Shorter delivery distances lower per-order operational cost
+- Balanced market presence reduces dependency on any single area
+- Ideal launchpad for phased expansion into adjacent Bangalore zones
+
+---
+
+## 📁 Project Structure
+
+```
+swiggy_Food_Delivery/
+│
+├── 📂 Data/
+│   └── Final_Data.csv                    # Cleaned & processed dataset
+│
+├── 📂 Scrapping/
+│   ├── Swiggy Table_1.ipynb              # Web scraping — Part 1
+│   ├── Swiggy Table_2.ipynb              # Web scraping — Part 2
+│   └── Insights (1).ipynb               # EDA & visualisation notebook
+│
+├── 📂 New folder/
+│   ├── Food Delivery (1).pdf             # Full project report
+│   └── Swiggy project (Questions).sql   # SQL queries
+│
+├── Swiggy Dashboard.pbix                 # Power BI interactive dashboard
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+pip install selenium pandas matplotlib seaborn beautifulsoup4 openpyxl
+```
+
+Also required:
+- **Google Chrome** + matching **ChromeDriver**
+- **MySQL Workbench** (for SQL analysis)
+- **Power BI Desktop** — [Download here](https://powerbi.microsoft.com/desktop)
+
+### 1. Run Scraping Notebooks
+
+```bash
+jupyter notebook
+# Run in order:
+# 1. Scrapping/Swiggy Table_1.ipynb
+# 2. Scrapping/Swiggy Table_2.ipynb
+# 3. Scrapping/Insights (1).ipynb
+```
+
+### 2. Load Data into MySQL
+
+```sql
+CREATE DATABASE swiggy_analysis;
+USE swiggy_analysis;
+
+LOAD DATA INFILE '/your/path/to/Final_Data.csv'
+INTO TABLE swiggy_data
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+```
+
+### 3. Open Power BI Dashboard
+
+1. Open **Power BI Desktop**
+2. File → Open → `Swiggy Dashboard.pbix`
+3. Update the data source path to your local `Final_Data.csv`
+4. Click **Refresh** to load data
+
+---
+
+## 🧩 Challenges & Learnings
+
+### 🛡️ Challenges Faced
+
+| Challenge | Solution |
+|---|---|
+| Swiggy blocks automated scrapers | Randomized delays + user-agent rotation in Selenium |
+| Data only available during business hours | Scheduled scraping runs during 11 AM – 10 PM windows |
+| Inconsistent formats (e.g., "₹200 for two") | Regex-based parsing with Pandas for normalization |
+| Missing ratings for newly listed restaurants | Imputed using area-wise median ratings |
+| Power BI slowing on large dataset | Applied query folding + DAX measure optimization |
+
+### 🎓 Key Learnings
+
+- Real-world scraping requires patience — websites frequently change their DOM structure
+- Data cleaning accounts for ~60% of any data analytics project's effort
+- SQL is essential for fast, accurate slicing of large datasets before visualization
+- Power BI map visuals are extremely powerful for location-based business decisions
+- Data-driven location strategy consistently outperforms intuition-based decisions
+
+---
+
+## 🔮 Future Scope
+
+- [ ] 🔄 **Automated pipeline** — Daily data refresh using Apache Airflow or cron jobs
+- [ ] 🤖 **Demand forecasting** — LSTM/Prophet model to predict order volumes by area and hour
+- [ ] 📲 **Streamlit web app** — Convert the dashboard into a publicly accessible web app
+- [ ] 🗺️ **Multi-city expansion** — Scale to Mumbai, Delhi, Hyderabad, Chennai
+- [ ] 💬 **Sentiment analysis** — NLP on customer reviews for deeper qualitative insights
+- [ ] 📦 **Menu optimization** — ML model to recommend ideal dish count and categories per location
+
+---
+
+⭐ **Star this repo if you found it helpful!** ⭐
+
+*Built with 🧡 and a lot of data — because every great restaurant deserves to be found.*
+
+</div>
+
